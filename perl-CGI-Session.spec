@@ -20,6 +20,7 @@ BuildRequires:  perl(DB_File)
 BuildRequires:  perl(FreezeThaw)
 BuildRequires:  perl(CGI::Simple)
 BuildArch: 	noarch
+BuildRoot: 	%{_tmppath}/%{name}-%{version}
 
 %description 
 CGI-Session is a Perl5 library that provides an easy, reliable and
