@@ -1,6 +1,6 @@
 %define module  CGI-Session
 %define name	perl-%{module}
-%define version 4.37
+%define version 4.38
 %define release %mkrel 1
 
 Name:		%{name}
