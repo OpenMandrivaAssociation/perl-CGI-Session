@@ -1,7 +1,9 @@
 %define module  CGI-Session
 %define name	perl-%{module}
 %define version 4.38
-%define release %mkrel 1
+%define release %mkrel 2
+
+%define _requires_exceptions perl(DBD::Pg)
 
 Name:		%{name}
 Version:	%{version}
@@ -11,9 +13,6 @@ License: 	GPL or Artistic
 Group: 		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
 Source:		http://www.cpan.org/modules/by-module/CGI/%{module}-%{version}.tar.bz2
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
 BuildRequires:  perl(CGI)
 BuildRequires:  perl(DBI)
 BuildRequires:  perl(DB_File)
