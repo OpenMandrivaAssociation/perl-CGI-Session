@@ -1,7 +1,7 @@
 %define module  CGI-Session
 %define name	perl-%{module}
-%define version 4.38
-%define release %mkrel 2
+%define version 4.41
+%define release %mkrel 1
 
 %define _requires_exceptions perl(DBD::Pg)
 
