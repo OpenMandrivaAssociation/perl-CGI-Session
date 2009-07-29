@@ -1,25 +1,25 @@
-%define module  CGI-Session
-%define name	perl-%{module}
-%define version 4.41
-%define release %mkrel 1
+%define upstream_name    CGI-Session
+%define upstream_version 4.41
 
 %define _requires_exceptions perl(DBD::Pg)
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary: 	Persistent session data in CGI applications
-License: 	GPL or Artistic
+License: 	GPL+ or Artistic
 Group: 		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:		http://www.cpan.org/modules/by-module/CGI/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/CGI/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:  perl(CGI)
 BuildRequires:  perl(DBI)
 BuildRequires:  perl(DB_File)
 BuildRequires:  perl(FreezeThaw)
 BuildRequires:  perl(CGI::Simple)
 BuildArch: 	noarch
-BuildRoot: 	%{_tmppath}/%{name}-%{version}
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description 
 CGI-Session is a Perl5 library that provides an easy, reliable and
@@ -29,7 +29,7 @@ login/authentication routines, and application that need to carry data
 accross HTTP requests. CGI::Session does that and many more 
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -52,6 +52,3 @@ rm -f  t/g4_mysql.t # no database available for testing
 %doc Changes README INSTALL
 %{perl_vendorlib}/CGI
 %{_mandir}/*/*
-
-
-
