@@ -1,5 +1,5 @@
 %define upstream_name    CGI-Session
-%define upstream_version 4.41
+%define upstream_version 4.42
 
 %define _requires_exceptions perl(DBD::Pg)
 
@@ -11,7 +11,7 @@ Summary: 	Persistent session data in CGI applications
 License: 	GPL+ or Artistic
 Group: 		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/CGI/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/CGI/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:  perl(CGI)
 BuildRequires:  perl(DBI)
