@@ -1,5 +1,5 @@
 %define upstream_name    CGI-Session
-%define upstream_version 4.42
+%define upstream_version 4.48
 
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(DBD::Pg\\)'
@@ -8,14 +8,14 @@
 %endif
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%perl_convert_version 4.48
+Release:	1
 
 Summary:	Persistent session data in CGI applications
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/CGI/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/CGI/CGI-Session-4.48.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(CGI)
@@ -163,4 +163,5 @@ rm -f %{buildroot}%{perl_archlib}/perllocal.pod
 
 * Wed Feb 25 2004 Guillaume Rousse <guillomovitch@mandrake.org> 3.95-2mdk
 - fixed dir ownership (distlint)
+
 

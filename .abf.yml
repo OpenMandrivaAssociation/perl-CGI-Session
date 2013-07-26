@@ -1,2 +1,4 @@
+removed_sources:
+  CGI-Session-4.42.tar.gz: c34880bd3cf524e1336fffa6c1ce6c0307898463
 sources:
-  "CGI-Session-4.42.tar.gz": c34880bd3cf524e1336fffa6c1ce6c0307898463
+  CGI-Session-4.48.tar.gz: 82dd630a11f2a0b01ea710c33225858718d99187
