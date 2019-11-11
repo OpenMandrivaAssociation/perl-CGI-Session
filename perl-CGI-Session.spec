@@ -9,7 +9,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 4.48
-Release:	3
+Release:	4
 
 Summary:	Persistent session data in CGI applications
 License:	GPL+ or Artistic
@@ -37,14 +37,10 @@ accross HTTP requests. CGI::Session does that and many more
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-%make
-
-%check
-rm -f  t/g4_mysql.t # no database available for testing
-make test
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 rm -f %{buildroot}%{perl_archlib}/perllocal.pod
 
 %files
