@@ -14,7 +14,7 @@ Release:	4
 Summary:	Persistent session data in CGI applications
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/CGI/CGI-Session-4.48.tar.gz
 
 BuildRequires:	perl-devel
