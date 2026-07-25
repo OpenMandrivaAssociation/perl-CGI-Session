@@ -1,5 +1,5 @@
 %define upstream_name    CGI-Session
-%define upstream_version 4.48
+%define upstream_version 4.49
 
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(DBD::Pg\\)'
@@ -8,14 +8,14 @@
 %endif
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 4.48
-Release:	4
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Persistent session data in CGI applications
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/CGI/CGI-Session-4.48.tar.gz
+Url:		https://github.com/cromedome/cgi-session
+Source0:	https://cpan.metacpan.org/authors/id/M/MA/MARKSTOS/CGI-Session-4.49.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
