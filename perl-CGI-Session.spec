@@ -1,6 +1,4 @@
 %define upstream_name    CGI-Session
-%define upstream_version 4.49
-
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(DBD::Pg\\)'
 %else
@@ -8,8 +6,8 @@
 %endif
 
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	4.49
+Release:	2
 
 Summary:	Persistent session data in CGI applications
 License:	GPL+ or Artistic
@@ -34,7 +32,7 @@ login/authentication routines, and application that need to carry data
 accross HTTP requests. CGI::Session does that and many more 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -61,9 +59,7 @@ rm -f %{buildroot}%{perl_archlib}/perllocal.pod
 
 * Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 4.410.0-1mdv2010.0
 + Revision: 403004
-- rebuild using %%perl_convert_version
-
-* Wed May 06 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 4.41-1mdv2010.0
+- rebuild using %4.49 Wed May 06 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 4.41-1mdv2010.0
 + Revision: 372684
 - update to new version 4.41
 
