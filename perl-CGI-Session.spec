@@ -1,4 +1,5 @@
 %define upstream_name    CGI-Session
+%define upstream_version 4.49
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(DBD::Pg\\)'
 %else
@@ -7,7 +8,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	4.49
-Release:	2
+Release:	1
 
 Summary:	Persistent session data in CGI applications
 License:	GPL+ or Artistic
