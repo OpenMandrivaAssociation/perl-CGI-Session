@@ -8,7 +8,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	4.49
-Release:	49
+Release:	1
 
 Summary:	Persistent session data in CGI applications
 License:	GPL+ or Artistic
@@ -47,7 +47,7 @@ make test || :
 rm -f %{buildroot}%{perl_archlib}/perllocal.pod
 
 %files
-%doc Changes README INSTALL
+%doc Changes INSTALL META.yml README
 %{perl_vendorlib}/CGI
 %{_mandir}/*/*
 
