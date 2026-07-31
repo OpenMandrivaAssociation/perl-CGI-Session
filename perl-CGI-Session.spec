@@ -8,7 +8,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	4.49
-Release:	9
+Release:	10
 
 Summary:	Persistent session data in CGI applications
 License:	GPL+ or Artistic
